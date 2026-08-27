@@ -1,0 +1,546 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download the AI Studio Mobile App for Android. Fast, lightweight and optimized for mobile.">
+  <meta name="theme-color" content="#0f2747">
+
+  <title>AI Studio Mobile App — Download</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --primary: #12345b;
+      --primary-dark: #0b2545;
+      --border: #e2e8f0;
+      --soft-blue: #eff6ff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, #ffffff 0%, var(--bg) 55%);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      padding: 22px 20px;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      max-width: 1050px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--primary);
+      box-shadow: 0 6px 18px rgba(18, 52, 91, 0.18);
+    }
+
+    .brand-icon svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .android-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* Main */
+    main {
+      flex: 1;
+      width: 100%;
+    }
+
+    .hero {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 82px 20px 54px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 12px;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      background: var(--soft-blue);
+      color: #1d4f85;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #2563eb;
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+      color: #0b1f38;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(16px, 2.5vw, 19px);
+      line-height: 1.7;
+    }
+
+    .metadata {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--border);
+      color: #475569;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    }
+
+    .metadata svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    /* Download */
+    .download-section {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 8px 20px 64px;
+      text-align: center;
+    }
+
+    .download-button {
+      width: 100%;
+      max-width: 430px;
+      min-height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      padding: 16px 25px;
+      border-radius: 14px;
+      color: white;
+      background: var(--primary);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      box-shadow:
+        0 12px 28px rgba(18, 52, 91, 0.2),
+        0 2px 5px rgba(18, 52, 91, 0.1);
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .download-button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow:
+        0 16px 34px rgba(18, 52, 91, 0.25),
+        0 3px 8px rgba(18, 52, 91, 0.12);
+    }
+
+    .download-button:active {
+      transform: translateY(0);
+    }
+
+    .download-button svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    .file-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Installation */
+    .installation {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 20px 85px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      font-size: 26px;
+      letter-spacing: -0.035em;
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .step {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.035);
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: var(--soft-blue);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+      letter-spacing: -0.015em;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    footer p {
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      header {
+        padding: 17px 16px;
+      }
+
+      .hero {
+        padding: 62px 20px 42px;
+      }
+
+      h1 {
+        font-size: 43px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .download-section {
+        padding-bottom: 55px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 16px;
+        padding: 20px;
+      }
+
+      .step-number {
+        grid-row: span 2;
+        margin-bottom: 0;
+      }
+
+      .step h3 {
+        margin-top: 1px;
+      }
+
+      .android-label {
+        display: none;
+      }
+    }
+
+    @media (max-width: 380px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .download-button {
+        min-height: 58px;
+        font-size: 16px;
+      }
+    }
+
+    /* Reduced motion accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .download-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <nav class="nav">
+        <div class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v12"></path>
+              <path d="m7 10 5 5 5-5"></path>
+              <path d="M5 21h14"></path>
+            </svg>
+          </div>
+          <span>AI Studio</span>
+        </div>
+
+        <span class="android-label">Android App</span>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Android App
+        </div>
+
+        <h1>AI Studio<br>Mobile App</h1>
+
+        <p class="subtitle">
+          A fast, simple and powerful mobile experience designed
+          to help you get more done with AI.
+        </p>
+
+        <div class="metadata">
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+          APK · 22.8 MB
+        </div>
+      </section>
+
+      <section class="download-section">
+        <!-- Replace app.apk with your actual APK filename or download URL -->
+        <a
+          class="download-button"
+          href="app.apk"
+          download
+          id="downloadBtn"
+          aria-label="Download AI Studio Mobile App APK"
+        >
+          <svg viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v12"></path>
+            <path d="m7 10 5 5 5-5"></path>
+            <path d="M5 21h14"></path>
+          </svg>
+
+          Download APK
+        </a>
+
+        <p class="file-note">
+          File size: 22.8 MB (Optimized for Android)
+        </p>
+      </section>
+
+      <section class="installation">
+        <div class="section-heading">
+          <h2>How to install</h2>
+          <p>Get started in just three simple steps.</p>
+        </div>
+
+        <div class="steps">
+
+          <article class="step">
+            <div class="step-number">01</div>
+
+            <h3>Download the APK</h3>
+            <p>
+              Tap the download button above and save the APK
+              file to your Android device.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">02</div>
+
+            <h3>Allow installation</h3>
+            <p>
+              If Android asks for permission, allow
+              “Install from unknown sources”.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">03</div>
+
+            <h3>Open & enjoy</h3>
+            <p>
+              Open the downloaded APK, complete the installation,
+              and start using the app.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>
+        © <span id="year"></span>
+        <strong>AI Studio</strong>. All rights reserved.
+      </p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Automatically update copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Small interaction feedback when download starts
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    downloadBtn.addEventListener("click", function () {
+      const originalText = this.innerHTML;
+
+      this.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 6 9 17l-5-5"></path>
+        </svg>
+        Download Starting...
+      `;
+
+      setTimeout(() => {
+        this.innerHTML = originalText;
+      }, 1800);
+    });
+  </script>
+</body>
+</html>
+```
