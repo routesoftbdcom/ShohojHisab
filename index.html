@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>সহজ হিসাব - Shohoj Hisab | RouteSoft Technologies</title>
     <meta name="description" content="দোকান ও ব্যবসার ডিজিটাল হিসাব খাতা, বাকি মেমো, স্টক ও লাভ-ক্ষতির অফলাইন সফটওয়্যার।">
+    
+    <!-- Favicon (RouteSoft Official Brand Mark: Blue Dot & Slanted Bar) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='12' cy='22' r='7' fill='%230022FF'/><path d='M28 10 L40 32 C42 35 41 39 37.5 41 C34 43 30 42 28 38.5 L16 16.5 C14 13.5 15 9.5 18.5 7.5 C22 5.5 26 6.5 28 10 Z' fill='%230022FF'/></svg>">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,13 +21,28 @@
     <!-- 1. NAVBAR -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-sky-600 text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-md">
-                    হ
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <img src="./app/src/main/res/drawable/ic_shohoj_hisab_1787673482346.jpg" alt="Shohoj Hisab" class="w-10 h-10 rounded-xl shadow-sm object-cover border border-slate-100" onerror="this.style.display='none'">
+                    <div>
+                        <h1 class="text-xl font-bold text-slate-900 leading-tight">সহজ হিসাব</h1>
+                        <p class="text-xs text-sky-600 font-semibold tracking-wide">দোকানের স্মার্ট ডিজিটাল খাতা</p>
+                    </div>
                 </div>
-                <div>
-                    <h1 class="text-xl font-bold text-slate-900 leading-tight">সহজ হিসাব</h1>
-                    <p class="text-xs text-sky-600 font-semibold tracking-wide">RouteSoft Technologies</p>
+
+                <!-- Vertical Divider -->
+                <div class="hidden sm:block h-6 w-px bg-slate-200"></div>
+
+                <!-- Official RouteSoft Company Logo -->
+                <div class="hidden sm:flex items-center gap-1.5 pl-1">
+                    <svg class="h-6 w-auto" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dot -->
+                        <circle cx="10" cy="18" r="5" fill="#0022FF" />
+                        <!-- Slanted Capsule -->
+                        <path d="M 23 8 L 33 26 C 34.5 28.6 33.6 32 31 33.5 C 28.4 35 25 34.1 23.5 31.5 L 13.5 13.5 C 12 10.9 12.9 7.5 15.5 6 C 18.1 4.5 21.5 5.4 23 8 Z" fill="#0022FF" />
+                        <!-- RouteSoft Text -->
+                        <text x="42" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="24" fill="#000000" letter-spacing="-0.5">RouteSoft</text>
+                    </svg>
                 </div>
             </div>
             <a href="https://wa.me/8801731844027" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm transition">
@@ -33,26 +52,43 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION -->
-    <section class="pt-12 pb-16 px-4 bg-gradient-to-b from-white to-slate-50 text-center">
-        <div class="max-w-3xl mx-auto">
-            <span class="inline-block bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full mb-4">
-                🔒 ১০০% অফলাইন ও আজীবন লাইসেন্স
-            </span>
-            <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-4">
-                আপনার দোকানের হিসাব রাখুন <br class="hidden sm:inline"><span class="text-sky-600">সবচেয়ে সহজে ও নিরাপদে</span>
-            </h2>
-            <p class="text-slate-600 text-base sm:text-lg mb-8 leading-relaxed">
-                কোনো মাসিক ফি নেই, ইন্টারনেট ছাড়াই কাজ করে। ক্যাশ খাতা, বাকি মেমো, স্টক ম্যানেজমেন্ট এবং দৈনিক লাভ-ক্ষতির সম্পূর্ণ সমাধান।
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://wa.me/8801731844027?text=Hello%20RouteSoft,%20I%20want%20to%20activate%20Shohoj%20Hisab%20app" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-sky-600/20 text-base transition">
-                    প্রোডাক্ট কী সংগ্রহ করুন
-                </a>
-                <a href="tel:01731844027" class="bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold px-6 py-3.5 rounded-xl text-base transition">
-                    📞 কল করুন (01731844027)
-                </a>
+    <!-- 2. HERO SECTION WITH APP PICTURE -->
+    <section class="pt-10 pb-16 px-4 bg-gradient-to-b from-white to-slate-50">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Hero Text & CTA -->
+            <div class="lg:col-span-7 text-center lg:text-left">
+                <span class="inline-block bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                    🔒 ১০০% অফলাইন ও আজীবন লাইসেন্স
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-4">
+                    আপনার দোকানের হিসাব রাখুন <br class="hidden sm:inline"><span class="text-sky-600">সবচেয়ে সহজে ও নিরাপদে</span>
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                    কোনো মাসিক ফি নেই, ইন্টারনেট ছাড়াই কাজ করে। ক্যাশ খাতা, বাকি মেমো, স্টক ম্যানেজমেন্ট এবং দৈনিক লাভ-ক্ষতির সম্পূর্ণ স্মার্ট সমাধান।
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <a href="https://wa.me/8801731844027?text=Hello%20RouteSoft,%20I%20want%20to%20activate%20Shohoj%20Hisab%20app" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-sky-600/20 text-base transition">
+                        প্রোডাক্ট কী সংগ্রহ করুন
+                    </a>
+                    <a href="tel:01731844027" class="bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold px-6 py-3.5 rounded-xl text-base transition">
+                        📞 কল করুন (01731844027)
+                    </a>
+                </div>
             </div>
+
+            <!-- Hero Phone Mockup / App Picture -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-72 sm:w-80 p-3 bg-slate-900 rounded-[2.5rem] shadow-2xl ring-1 ring-slate-800/20">
+                    <!-- Phone Speaker & Camera Notch -->
+                    <div class="absolute top-6 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-800 rounded-full z-10"></div>
+                    <!-- App Screen Image -->
+                    <div class="overflow-hidden rounded-[2rem] bg-slate-100 border-4 border-slate-950">
+                        <img src="./app/src/main/res/drawable/app_mockup_screen_1787882262450.jpg" alt="সহজ হিসাব অ্যাপ স্ক্রিন" class="w-full h-auto object-cover transform hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -178,11 +214,21 @@
     </section>
 
     <!-- 7. FOOTER -->
-    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800 text-center text-xs">
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-center text-xs">
         <div class="max-w-4xl mx-auto px-4 space-y-4">
-            <p class="text-white text-sm font-semibold">সহজ হিসাব — RouteSoft Technologies</p>
-            <p>হটলাইন ও হোয়াটসঅ্যাপ সাপোর্ট: <a href="tel:01731844027" class="text-sky-400 hover:underline">01731844027</a> (+8801731844027)</p>
-            <p class="text-slate-600">© 2026 RouteSoft Technologies. সর্বস্বত্ব সংরক্ষিত।</p>
+            <div class="flex items-center justify-center gap-2">
+                <svg class="h-7 w-auto" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Dot -->
+                    <circle cx="10" cy="18" r="5" fill="#3B82F6" />
+                    <!-- Slanted Capsule -->
+                    <path d="M 23 8 L 33 26 C 34.5 28.6 33.6 32 31 33.5 C 28.4 35 25 34.1 23.5 31.5 L 13.5 13.5 C 12 10.9 12.9 7.5 15.5 6 C 18.1 4.5 21.5 5.4 23 8 Z" fill="#3B82F6" />
+                    <!-- RouteSoft Text -->
+                    <text x="42" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="24" fill="#FFFFFF" letter-spacing="-0.5">RouteSoft</text>
+                </svg>
+            </div>
+            <p class="text-white text-sm font-medium">সহজ হিসাব — ক্ষুদ্র ও মাঝারি ব্যবসার ডিজিটাল অ্যাকাউন্টিং সল্যুশন</p>
+            <p>অফিশিয়াল হটলাইন ও হোয়াটসঅ্যাপ সাপোর্ট: <a href="https://wa.me/8801731844027" class="text-sky-400 font-semibold hover:underline">01731844027</a> (+8801731844027)</p>
+            <p class="text-slate-500">© 2026 RouteSoft Technologies. সর্বস্বত্ব সংরক্ষিত।</p>
         </div>
     </footer>
 
