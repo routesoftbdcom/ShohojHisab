@@ -6,7 +6,7 @@
     <title>সহজ হিসাব - Shohoj Hisab | RouteSoft Technologies</title>
     <meta name="description" content="দোকান ও ব্যবসার ডিজিটাল হিসাব খাতা, বাকি মেমো, স্টক ও লাভ-ক্ষতির অফলাইন সফটওয়্যার।">
     
-    <!-- Favicon (RouteSoft Official Brand Mark: Blue Dot & Slanted Bar) -->
+    <!-- Favicon (RouteSoft Brand Icon) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='12' cy='22' r='7' fill='%230022FF'/><path d='M28 10 L40 32 C42 35 41 39 37.5 41 C34 43 30 42 28 38.5 L16 16.5 C14 13.5 15 9.5 18.5 7.5 C22 5.5 26 6.5 28 10 Z' fill='%230022FF'/></svg>">
     
     <!-- Tailwind CSS CDN -->
@@ -19,11 +19,19 @@
 <body class="bg-slate-50 text-slate-800 antialiased">
 
     <!-- 1. NAVBAR -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <div class="flex items-center gap-4">
-                <div class="flex items-center gap-2">
-                    <img src="./app/src/main/res/drawable/ic_shohoj_hisab_1787673482346.jpg" alt="Shohoj Hisab" class="w-10 h-10 rounded-xl shadow-sm object-cover border border-slate-100" onerror="this.style.display='none'">
+                <!-- Shohoj Hisab Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 bg-gradient-to-tr from-emerald-600 to-sky-500 rounded-xl shadow-md flex items-center justify-center text-white border border-emerald-400/40 p-1">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8">
+                            <rect x="6" y="8" width="36" height="32" rx="6" fill="#FFFFFF" fill-opacity="0.2" stroke="#FFFFFF" stroke-width="2.5"/>
+                            <path d="M14 18H34M14 25H28M14 32H22" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="34" cy="30" r="5" fill="#10B981"/>
+                            <path d="M32 30L33.5 31.5L36.5 28.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <div>
                         <h1 class="text-xl font-bold text-slate-900 leading-tight">সহজ হিসাব</h1>
                         <p class="text-xs text-sky-600 font-semibold tracking-wide">দোকানের স্মার্ট ডিজিটাল খাতা</p>
@@ -31,36 +39,34 @@
                 </div>
 
                 <!-- Vertical Divider -->
-                <div class="hidden sm:block h-6 w-px bg-slate-200"></div>
+                <div class="hidden sm:block h-7 w-px bg-slate-200"></div>
 
-                <!-- Official RouteSoft Company Logo -->
+                <!-- RouteSoft Official Company Logo -->
                 <div class="hidden sm:flex items-center gap-1.5 pl-1">
                     <svg class="h-6 w-auto" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Dot -->
                         <circle cx="10" cy="18" r="5" fill="#0022FF" />
-                        <!-- Slanted Capsule -->
                         <path d="M 23 8 L 33 26 C 34.5 28.6 33.6 32 31 33.5 C 28.4 35 25 34.1 23.5 31.5 L 13.5 13.5 C 12 10.9 12.9 7.5 15.5 6 C 18.1 4.5 21.5 5.4 23 8 Z" fill="#0022FF" />
-                        <!-- RouteSoft Text -->
                         <text x="42" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="24" fill="#000000" letter-spacing="-0.5">RouteSoft</text>
                     </svg>
                 </div>
             </div>
-            <a href="https://wa.me/8801731844027" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm transition">
+            <a href="https://wa.me/8801731844027" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2.5 rounded-lg flex items-center gap-2 shadow-sm transition">
                 <span>💬 WhatsApp</span>
                 <span class="hidden sm:inline">01731844027</span>
             </a>
         </div>
     </header>
 
-    <!-- 2. HERO SECTION WITH APP PICTURE -->
+    <!-- 2. HERO SECTION WITH VECTOR PHONE APP UI -->
     <section class="pt-10 pb-16 px-4 bg-gradient-to-b from-white to-slate-50">
         <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 items-center">
             
             <!-- Hero Text & CTA -->
             <div class="lg:col-span-7 text-center lg:text-left">
-                <span class="inline-block bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                <div class="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 text-sky-800 text-xs font-bold px-3 py-1.5 rounded-full mb-4">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                     🔒 ১০০% অফলাইন ও আজীবন লাইসেন্স
-                </span>
+                </div>
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-4">
                     আপনার দোকানের হিসাব রাখুন <br class="hidden sm:inline"><span class="text-sky-600">সবচেয়ে সহজে ও নিরাপদে</span>
                 </h2>
@@ -68,23 +74,128 @@
                     কোনো মাসিক ফি নেই, ইন্টারনেট ছাড়াই কাজ করে। ক্যাশ খাতা, বাকি মেমো, স্টক ম্যানেজমেন্ট এবং দৈনিক লাভ-ক্ষতির সম্পূর্ণ স্মার্ট সমাধান।
                 </p>
                 <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                    <a href="https://wa.me/8801731844027?text=Hello%20RouteSoft,%20I%20want%20to%20activate%20Shohoj%20Hisab%20app" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-sky-600/20 text-base transition">
-                        প্রোডাক্ট কী সংগ্রহ করুন
+                    <a href="https://wa.me/8801731844027?text=Hello%20RouteSoft,%20I%20want%20to%20activate%20Shohoj%20Hisab%20app" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-sky-600/20 text-base transition flex items-center gap-2">
+                        <span>🔑</span>
+                        <span>প্রোডাক্ট কী সংগ্রহ করুন</span>
                     </a>
-                    <a href="tel:01731844027" class="bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold px-6 py-3.5 rounded-xl text-base transition">
-                        📞 কল করুন (01731844027)
+                    <a href="tel:01731844027" class="bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold px-6 py-3.5 rounded-xl text-base transition flex items-center gap-2">
+                        <span>📞</span>
+                        <span>কল করুন (01731844027)</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Hero Phone Mockup / App Picture -->
+            <!-- Hero Phone UI (Pure Vector Interactive Layout) -->
             <div class="lg:col-span-5 flex justify-center">
-                <div class="relative w-72 sm:w-80 p-3 bg-slate-900 rounded-[2.5rem] shadow-2xl ring-1 ring-slate-800/20">
-                    <!-- Phone Speaker & Camera Notch -->
-                    <div class="absolute top-6 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-800 rounded-full z-10"></div>
-                    <!-- App Screen Image -->
-                    <div class="overflow-hidden rounded-[2rem] bg-slate-100 border-4 border-slate-950">
-                        <img src="./app/src/main/res/drawable/app_mockup_screen_1787882262450.jpg" alt="সহজ হিসাব অ্যাপ স্ক্রিন" class="w-full h-auto object-cover transform hover:scale-105 transition duration-500">
+                <div class="w-72 sm:w-80 bg-slate-900 p-3.5 rounded-[2.8rem] shadow-2xl ring-1 ring-slate-800 border-4 border-slate-800">
+                    
+                    <!-- Phone Screen Body -->
+                    <div class="bg-slate-100 rounded-[2.2rem] overflow-hidden text-slate-800 flex flex-col shadow-inner select-none">
+                        
+                        <!-- App Status Bar & Header -->
+                        <div class="bg-slate-900 text-white p-4 pt-3 pb-4">
+                            <!-- Notch & Time -->
+                            <div class="flex justify-between items-center text-[10px] text-slate-400 mb-2 px-1">
+                                <span>9:41 AM</span>
+                                <div class="w-16 h-3 bg-slate-800 rounded-full mx-auto"></div>
+                                <span>100% 🔋</span>
+                            </div>
+                            
+                            <!-- App Title Bar -->
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-7 h-7 bg-emerald-500 rounded-lg flex items-center justify-center font-bold text-xs text-white">
+                                        হ
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-sm leading-tight text-white">সহজ হিসাব</h3>
+                                        <p class="text-[9px] text-emerald-400">মেসার্স সততা স্টোর • আজীবন লাইসেন্স</p>
+                                    </div>
+                                </div>
+                                <span class="bg-emerald-600/80 text-[9px] px-2 py-0.5 rounded-full text-emerald-100 font-bold">অফলাইন</span>
+                            </div>
+                        </div>
+
+                        <!-- App Dashboard Summary Cards -->
+                        <div class="p-3 space-y-2.5">
+                            
+                            <!-- Cash Overview -->
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-white p-2.5 rounded-xl border border-emerald-200 shadow-sm">
+                                    <span class="text-[10px] text-slate-500 font-medium">আজকের জমা (In)</span>
+                                    <p class="text-sm font-bold text-emerald-600 mt-0.5">৳ ১২,৪৫০</p>
+                                </div>
+                                <div class="bg-white p-2.5 rounded-xl border border-rose-200 shadow-sm">
+                                    <span class="text-[10px] text-slate-500 font-medium">আজকের খরচ (Out)</span>
+                                    <p class="text-sm font-bold text-rose-600 mt-0.5">৳ ৩,২০০</p>
+                                </div>
+                            </div>
+
+                            <!-- Net Balance Card -->
+                            <div class="bg-gradient-to-r from-sky-600 to-blue-700 text-white p-3 rounded-xl shadow-sm flex justify-between items-center">
+                                <div>
+                                    <p class="text-[10px] text-sky-100">মোট ক্যাশ ব্যালেন্স</p>
+                                    <p class="text-base font-extrabold mt-0.5">৳ ৯,২৫০</p>
+                                </div>
+                                <span class="text-xs bg-white/20 px-2 py-1 rounded-lg">ক্যাশ মেমো 🧾</span>
+                            </div>
+
+                            <!-- Customer Ledger List Simulation -->
+                            <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                                <div class="flex justify-between items-center text-[11px] font-bold text-slate-700 border-b border-slate-100 pb-1.5">
+                                    <span>বাকি খাতা (গ্রাহক)</span>
+                                    <span class="text-sky-600 text-[10px]">সব দেখুন &gt;</span>
+                                </div>
+                                
+                                <div class="flex justify-between items-center text-[10px]">
+                                    <div>
+                                        <p class="font-bold text-slate-800">মোঃ করিম ভাই</p>
+                                        <p class="text-[9px] text-slate-400">চাল ও ডাল বাকি</p>
+                                    </div>
+                                    <span class="text-rose-600 font-bold">বাকি: ৳ ১,৫০০</span>
+                                </div>
+
+                                <div class="flex justify-between items-center text-[10px]">
+                                    <div>
+                                        <p class="font-bold text-slate-800">রাশেদ আহমেদ</p>
+                                        <p class="text-[9px] text-slate-400">নগদ পরিশোধিত</p>
+                                    </div>
+                                    <span class="text-emerald-600 font-bold">পরিশোধ: ৳ ৮০০</span>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Action Buttons in Phone Screen -->
+                            <div class="grid grid-cols-2 gap-2 pt-0.5">
+                                <div class="bg-emerald-600 text-white text-center py-2 rounded-lg text-[10px] font-bold shadow-sm">
+                                    + নতুন বিক্রি / মেমো
+                                </div>
+                                <div class="bg-slate-800 text-white text-center py-2 rounded-lg text-[10px] font-bold shadow-sm">
+                                    + খরচ যোগ করুন
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Navigation Bar Inside Phone -->
+                        <div class="bg-white border-t border-slate-200 p-2 flex justify-around text-[9px] text-slate-500 mt-1">
+                            <div class="text-sky-600 font-bold flex flex-col items-center">
+                                <span>🏠</span>
+                                <span>হোম</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <span>📒</span>
+                                <span>খাতা</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <span>📦</span>
+                                <span>স্টক</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <span>⚙️</span>
+                                <span>সেটিংস</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -101,24 +212,24 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 relative">
-                    <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm mb-4">১</span>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 relative hover:border-sky-300 transition">
+                    <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm mb-4 shadow">১</span>
                     <h4 class="font-bold text-lg text-slate-900 mb-2">Product Buy Code দেখুন</h4>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         অ্যাপ ওপেন করলে আপনার ডিভাইসের জন্য অটো-জেনারেটেড <strong>Product Buy Code (PBC)</strong> দেখতে পাবেন। কোডটি কপি করুন।
                     </p>
                 </div>
 
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 relative">
-                    <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm mb-4">২</span>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 relative hover:border-sky-300 transition">
+                    <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm mb-4 shadow">২</span>
                     <h4 class="font-bold text-lg text-slate-900 mb-2">কোম্পানি বা এজেন্টে পাঠান</h4>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         আপনার Product Buy Code-টি <strong>RouteSoft হটলাইনে</strong> অথবা আপনার এলাকার অনুমোদিত <strong>RouteSoft এজেন্টের</strong> কাছে পাঠিয়ে দিন।
                     </p>
                 </div>
 
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 relative">
-                    <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm mb-4">৩</span>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 relative hover:border-sky-300 transition">
+                    <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm mb-4 shadow">৩</span>
                     <h4 class="font-bold text-lg text-slate-900 mb-2">১৬ সংখ্যার কী দিয়ে আনলক</h4>
                     <p class="text-slate-600 text-sm leading-relaxed">
                         কোম্পানি থেকে প্রাপ্ত ১৬-সংখ্যার <strong>Product Key</strong> টি অ্যাপে বসিয়ে সাবমিট করলেই লাইফটাইম আনলক হয়ে যাবে।
@@ -137,32 +248,32 @@
             </div>
 
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
                     <div class="text-2xl mb-2">💵</div>
                     <h4 class="font-bold text-slate-900 mb-1">দৈনিক ক্যাশ খাতা</h4>
                     <p class="text-slate-600 text-xs leading-relaxed">দৈনিক বিক্রি, খরচ ও জমার হিসাব রাখুন এবং কত ক্যাশ অবশিষ্ট আছে তা এক পলকে জানুন।</p>
                 </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
                     <div class="text-2xl mb-2">📒</div>
                     <h4 class="font-bold text-slate-900 mb-1">কাস্টমার বাকি খাতা</h4>
                     <p class="text-slate-600 text-xs leading-relaxed">কার কাছে কত বাকি আছে তার তালিকা এবং পরিশোধিত টাকার নির্ভুল খতিয়ান সংরক্ষণ।</p>
                 </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
                     <div class="text-2xl mb-2">🧾</div>
                     <h4 class="font-bold text-slate-900 mb-1">ডিজিটাল ক্যাশ মেমো</h4>
                     <p class="text-slate-600 text-xs leading-relaxed">দোকানের নামসহ সুন্দর ইনভয়েস তৈরি করে সরাসরি কাস্টমারের হোয়াটসঅ্যাপে পাঠান।</p>
                 </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
                     <div class="text-2xl mb-2">📦</div>
                     <h4 class="font-bold text-slate-900 mb-1">স্টক ও ইনভেন্টরি</h4>
                     <p class="text-slate-600 text-xs leading-relaxed">দোকানের পণ্যের পরিমাণ এবং পণ্য শেষ হয়ে যাওয়ার আগেই লো-স্টক নোটিফিকেশন পান।</p>
                 </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
                     <div class="text-2xl mb-2">📊</div>
                     <h4 class="font-bold text-slate-900 mb-1">লাভ-লোকসান রিপোর্ট</h4>
                     <p class="text-slate-600 text-xs leading-relaxed">দিন, সপ্তাহ ও মাসের মোট বিক্রি ও নিট লাভের পূর্ণাঙ্গ অ্যানালিটিক্স চার্ট।</p>
                 </div>
-                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
                     <div class="text-2xl mb-2">🛡️</div>
                     <h4 class="font-bold text-slate-900 mb-1">১০০% অফলাইন ও নিরাপদ</h4>
                     <p class="text-slate-600 text-xs leading-relaxed">সব ডাটা আপনার ফোনেই সংরক্ষিত থাকে। ইন্টারনেট ছাড়াই কাজ করে দ্রুত গতিতে।</p>
@@ -218,11 +329,8 @@
         <div class="max-w-4xl mx-auto px-4 space-y-4">
             <div class="flex items-center justify-center gap-2">
                 <svg class="h-7 w-auto" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Dot -->
                     <circle cx="10" cy="18" r="5" fill="#3B82F6" />
-                    <!-- Slanted Capsule -->
                     <path d="M 23 8 L 33 26 C 34.5 28.6 33.6 32 31 33.5 C 28.4 35 25 34.1 23.5 31.5 L 13.5 13.5 C 12 10.9 12.9 7.5 15.5 6 C 18.1 4.5 21.5 5.4 23 8 Z" fill="#3B82F6" />
-                    <!-- RouteSoft Text -->
                     <text x="42" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="24" fill="#FFFFFF" letter-spacing="-0.5">RouteSoft</text>
                 </svg>
             </div>
