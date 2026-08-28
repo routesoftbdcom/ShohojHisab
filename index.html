@@ -1,546 +1,190 @@
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Download the AI Studio Mobile App for Android. Fast, lightweight and optimized for mobile.">
-  <meta name="theme-color" content="#0f2747">
-
-  <title>AI Studio Mobile App — Download</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --primary: #12345b;
-      --primary-dark: #0b2545;
-      --border: #e2e8f0;
-      --soft-blue: #eff6ff;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top, #ffffff 0%, var(--bg) 55%);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Header */
-    header {
-      width: 100%;
-      padding: 22px 20px;
-      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(12px);
-    }
-
-    .nav {
-      max-width: 1050px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 16px;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      color: white;
-      background: var(--primary);
-      box-shadow: 0 6px 18px rgba(18, 52, 91, 0.18);
-    }
-
-    .brand-icon svg {
-      width: 19px;
-      height: 19px;
-    }
-
-    .android-label {
-      font-size: 13px;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    /* Main */
-    main {
-      flex: 1;
-      width: 100%;
-    }
-
-    .hero {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 82px 20px 54px;
-      text-align: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 12px;
-      border: 1px solid #dbeafe;
-      border-radius: 999px;
-      background: var(--soft-blue);
-      color: #1d4f85;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 24px;
-    }
-
-    .eyebrow-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #2563eb;
-    }
-
-    h1 {
-      font-size: clamp(40px, 7vw, 68px);
-      line-height: 1.05;
-      letter-spacing: -0.055em;
-      font-weight: 800;
-      color: #0b1f38;
-      margin-bottom: 20px;
-    }
-
-    .subtitle {
-      max-width: 620px;
-      margin: 0 auto;
-      color: var(--muted);
-      font-size: clamp(16px, 2.5vw, 19px);
-      line-height: 1.7;
-    }
-
-    .metadata {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 24px;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: #fff;
-      border: 1px solid var(--border);
-      color: #475569;
-      font-size: 13px;
-      font-weight: 600;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-    }
-
-    .metadata svg {
-      width: 15px;
-      height: 15px;
-    }
-
-    /* Download */
-    .download-section {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 8px 20px 64px;
-      text-align: center;
-    }
-
-    .download-button {
-      width: 100%;
-      max-width: 430px;
-      min-height: 62px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 11px;
-      padding: 16px 25px;
-      border-radius: 14px;
-      color: white;
-      background: var(--primary);
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      box-shadow:
-        0 12px 28px rgba(18, 52, 91, 0.2),
-        0 2px 5px rgba(18, 52, 91, 0.1);
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .download-button:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-      box-shadow:
-        0 16px 34px rgba(18, 52, 91, 0.25),
-        0 3px 8px rgba(18, 52, 91, 0.12);
-    }
-
-    .download-button:active {
-      transform: translateY(0);
-    }
-
-    .download-button svg {
-      width: 21px;
-      height: 21px;
-    }
-
-    .file-note {
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* Installation */
-    .installation {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 10px 20px 85px;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .section-heading h2 {
-      font-size: 26px;
-      letter-spacing: -0.035em;
-      margin-bottom: 8px;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .step {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 25px;
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.035);
-    }
-
-    .step-number {
-      width: 38px;
-      height: 38px;
-      display: grid;
-      place-items: center;
-      border-radius: 11px;
-      background: var(--soft-blue);
-      color: var(--primary);
-      font-size: 14px;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .step h3 {
-      font-size: 16px;
-      margin-bottom: 7px;
-      letter-spacing: -0.015em;
-    }
-
-    .step p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 25px 20px;
-      text-align: center;
-      background: #fff;
-    }
-
-    footer p {
-      color: #94a3b8;
-      font-size: 13px;
-    }
-
-    footer strong {
-      color: #64748b;
-      font-weight: 600;
-    }
-
-    /* Mobile */
-    @media (max-width: 700px) {
-      header {
-        padding: 17px 16px;
-      }
-
-      .hero {
-        padding: 62px 20px 42px;
-      }
-
-      h1 {
-        font-size: 43px;
-      }
-
-      .subtitle {
-        font-size: 16px;
-      }
-
-      .download-section {
-        padding-bottom: 55px;
-      }
-
-      .steps {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .step {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        column-gap: 16px;
-        padding: 20px;
-      }
-
-      .step-number {
-        grid-row: span 2;
-        margin-bottom: 0;
-      }
-
-      .step h3 {
-        margin-top: 1px;
-      }
-
-      .android-label {
-        display: none;
-      }
-    }
-
-    @media (max-width: 380px) {
-      h1 {
-        font-size: 38px;
-      }
-
-      .hero {
-        padding-top: 50px;
-      }
-
-      .download-button {
-        min-height: 58px;
-        font-size: 16px;
-      }
-    }
-
-    /* Reduced motion accessibility */
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .download-button {
-        transition: none;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সহজ হিসাব - Shohoj Hisab | RouteSoft Technologies</title>
+    <meta name="description" content="দোকান ও ব্যবসার ডিজিটাল হিসাব খাতা, বাকি মেমো, স্টক ও লাভ-ক্ষতির অফলাইন সফটওয়্যার।">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Hind Siliguri', sans-serif; }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-800 antialiased">
 
-<body>
-  <div class="page">
-
-    <header>
-      <nav class="nav">
-        <div class="brand">
-          <div class="brand-icon">
-            <svg viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="2"
-                 stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 3v12"></path>
-              <path d="m7 10 5 5 5-5"></path>
-              <path d="M5 21h14"></path>
-            </svg>
-          </div>
-          <span>AI Studio</span>
+    <!-- 1. NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-sky-600 text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-md">
+                    হ
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-slate-900 leading-tight">সহজ হিসাব</h1>
+                    <p class="text-xs text-sky-600 font-semibold tracking-wide">RouteSoft Technologies</p>
+                </div>
+            </div>
+            <a href="https://wa.me/8801731844027" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 rounded-lg flex items-center gap-2 shadow-sm transition">
+                <span>💬 WhatsApp</span>
+                <span class="hidden sm:inline">01731844027</span>
+            </a>
         </div>
-
-        <span class="android-label">Android App</span>
-      </nav>
     </header>
 
-    <main>
-
-      <section class="hero">
-        <div class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          Android App
-        </div>
-
-        <h1>AI Studio<br>Mobile App</h1>
-
-        <p class="subtitle">
-          A fast, simple and powerful mobile experience designed
-          to help you get more done with AI.
-        </p>
-
-        <div class="metadata">
-          <svg viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2"
-               stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-          </svg>
-          APK · 22.8 MB
-        </div>
-      </section>
-
-      <section class="download-section">
-        <!-- Replace app.apk with your actual APK filename or download URL -->
-        <a
-          class="download-button"
-          href="app.apk"
-          download
-          id="downloadBtn"
-          aria-label="Download AI Studio Mobile App APK"
-        >
-          <svg viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2"
-               stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3v12"></path>
-            <path d="m7 10 5 5 5-5"></path>
-            <path d="M5 21h14"></path>
-          </svg>
-
-          Download APK
-        </a>
-
-        <p class="file-note">
-          File size: 22.8 MB (Optimized for Android)
-        </p>
-      </section>
-
-      <section class="installation">
-        <div class="section-heading">
-          <h2>How to install</h2>
-          <p>Get started in just three simple steps.</p>
-        </div>
-
-        <div class="steps">
-
-          <article class="step">
-            <div class="step-number">01</div>
-
-            <h3>Download the APK</h3>
-            <p>
-              Tap the download button above and save the APK
-              file to your Android device.
+    <!-- 2. HERO SECTION -->
+    <section class="pt-12 pb-16 px-4 bg-gradient-to-b from-white to-slate-50 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-block bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                🔒 ১০০% অফলাইন ও আজীবন লাইসেন্স
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-4">
+                আপনার দোকানের হিসাব রাখুন <br class="hidden sm:inline"><span class="text-sky-600">সবচেয়ে সহজে ও নিরাপদে</span>
+            </h2>
+            <p class="text-slate-600 text-base sm:text-lg mb-8 leading-relaxed">
+                কোনো মাসিক ফি নেই, ইন্টারনেট ছাড়াই কাজ করে। ক্যাশ খাতা, বাকি মেমো, স্টক ম্যানেজমেন্ট এবং দৈনিক লাভ-ক্ষতির সম্পূর্ণ সমাধান।
             </p>
-          </article>
-
-          <article class="step">
-            <div class="step-number">02</div>
-
-            <h3>Allow installation</h3>
-            <p>
-              If Android asks for permission, allow
-              “Install from unknown sources”.
-            </p>
-          </article>
-
-          <article class="step">
-            <div class="step-number">03</div>
-
-            <h3>Open & enjoy</h3>
-            <p>
-              Open the downloaded APK, complete the installation,
-              and start using the app.
-            </p>
-          </article>
-
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://wa.me/8801731844027?text=Hello%20RouteSoft,%20I%20want%20to%20activate%20Shohoj%20Hisab%20app" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-sky-600/20 text-base transition">
+                    প্রোডাক্ট কী সংগ্রহ করুন
+                </a>
+                <a href="tel:01731844027" class="bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold px-6 py-3.5 rounded-xl text-base transition">
+                    📞 কল করুন (01731844027)
+                </a>
+            </div>
         </div>
-      </section>
+    </section>
 
-    </main>
+    <!-- 3. HOW ACTIVATION WORKS (PBC & PRODUCT KEY) -->
+    <section class="py-12 bg-white border-y border-slate-200">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">অ্যাপ অ্যাক্টিভেশন করার সহজ ৩টি ধাপ</h3>
+                <p class="text-slate-500 text-sm mt-1">কোনো ঝামেলা ছাড়াই ১ মিনিটে আজীবনের জন্য অ্যাপ সক্রিয় করুন</p>
+            </div>
 
-    <footer>
-      <p>
-        © <span id="year"></span>
-        <strong>AI Studio</strong>. All rights reserved.
-      </p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 relative">
+                    <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm mb-4">১</span>
+                    <h4 class="font-bold text-lg text-slate-900 mb-2">Product Buy Code দেখুন</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        অ্যাপ ওপেন করলে আপনার ডিভাইসের জন্য অটো-জেনারেটেড <strong>Product Buy Code (PBC)</strong> দেখতে পাবেন। কোডটি কপি করুন।
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 relative">
+                    <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm mb-4">২</span>
+                    <h4 class="font-bold text-lg text-slate-900 mb-2">কোম্পানি বা এজেন্টে পাঠান</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        আপনার Product Buy Code-টি <strong>RouteSoft হটলাইনে</strong> অথবা আপনার এলাকার অনুমোদিত <strong>RouteSoft এজেন্টের</strong> কাছে পাঠিয়ে দিন।
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 relative">
+                    <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-bold text-sm mb-4">৩</span>
+                    <h4 class="font-bold text-lg text-slate-900 mb-2">১৬ সংখ্যার কী দিয়ে আনলক</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        কোম্পানি থেকে প্রাপ্ত ১৬-সংখ্যার <strong>Product Key</strong> টি অ্যাপে বসিয়ে সাবমিট করলেই লাইফটাইম আনলক হয়ে যাবে।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CORE FEATURES -->
+    <section class="py-14 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">সহজ হিসাব অ্যাপের বিশেষ সুবিধাসমূহ</h3>
+                <p class="text-slate-500 text-sm mt-1">ক্ষুদ্র ও মাঝারি যেকোনো ব্যবসার দৈনন্দিন হিসাবের পূর্ণাঙ্গ হাতিয়ার</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl mb-2">💵</div>
+                    <h4 class="font-bold text-slate-900 mb-1">দৈনিক ক্যাশ খাতা</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">দৈনিক বিক্রি, খরচ ও জমার হিসাব রাখুন এবং কত ক্যাশ অবশিষ্ট আছে তা এক পলকে জানুন।</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl mb-2">📒</div>
+                    <h4 class="font-bold text-slate-900 mb-1">কাস্টমার বাকি খাতা</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">কার কাছে কত বাকি আছে তার তালিকা এবং পরিশোধিত টাকার নির্ভুল খতিয়ান সংরক্ষণ।</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl mb-2">🧾</div>
+                    <h4 class="font-bold text-slate-900 mb-1">ডিজিটাল ক্যাশ মেমো</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">দোকানের নামসহ সুন্দর ইনভয়েস তৈরি করে সরাসরি কাস্টমারের হোয়াটসঅ্যাপে পাঠান।</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl mb-2">📦</div>
+                    <h4 class="font-bold text-slate-900 mb-1">স্টক ও ইনভেন্টরি</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">দোকানের পণ্যের পরিমাণ এবং পণ্য শেষ হয়ে যাওয়ার আগেই লো-স্টক নোটিফিকেশন পান।</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl mb-2">📊</div>
+                    <h4 class="font-bold text-slate-900 mb-1">লাভ-লোকসান রিপোর্ট</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">দিন, সপ্তাহ ও মাসের মোট বিক্রি ও নিট লাভের পূর্ণাঙ্গ অ্যানালিটিক্স চার্ট।</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl mb-2">🛡️</div>
+                    <h4 class="font-bold text-slate-900 mb-1">১০০% অফলাইন ও নিরাপদ</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">সব ডাটা আপনার ফোনেই সংরক্ষিত থাকে। ইন্টারনেট ছাড়াই কাজ করে দ্রুত গতিতে।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. AGENT & PARTNER NOTICE -->
+    <section class="py-8 bg-sky-50 border-y border-sky-100">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🤝</span>
+                <div>
+                    <h4 class="font-bold text-slate-900">RouteSoft অনুমোদিত এজেন্ট নেটওয়ার্ক</h4>
+                    <p class="text-xs text-slate-600">আপনি সরাসরি RouteSoft অথবা আপনার এলাকার অনুমোদিত এজেন্ট/বিজনেস পার্টনারদের কাছ থেকেও প্রোডাক্ট কী সংগ্রহ করতে পারবেন।</p>
+                </div>
+            </div>
+            <a href="tel:01731844027" class="bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold px-4 py-2.5 rounded-lg whitespace-nowrap transition">
+                এজেন্ট তথ্য জানতে কল করুন
+            </a>
+        </div>
+    </section>
+
+    <!-- 6. SECURITY & PRESERVATION INSTRUCTIONS -->
+    <section class="py-12 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-2xl shadow-xl">
+                <div class="flex items-center gap-2 mb-4 text-amber-400 font-bold text-base">
+                    <span>🔒</span>
+                    <h4>Important Instructions / জরুরি নির্দেশনা</h4>
+                </div>
+                <ul class="space-y-3 text-sm text-slate-300">
+                    <li class="flex items-start gap-2">
+                        <span class="text-sky-400 font-bold">•</span>
+                        <span><strong>Don't share your product key with anyone:</strong> আপনার প্রোডাক্ট কীটি অন্য কারো সাথে শেয়ার করবেন না।</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-sky-400 font-bold">•</span>
+                        <span><strong>Preserve your product key:</strong> ভবিষ্যতে কোনো কারণে অ্যাপ রি-ইনস্টল করার প্রয়োজনে প্রোডাক্ট কীটি খাতায় বা ডায়েরিতে লিখে রাখুন।</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-sky-400 font-bold">•</span>
+                        <span><strong>This product key will work only in this phone:</strong> প্রাপ্ত প্রোডাক্ট কী শুধুমাত্র আপনার এই নির্দিষ্ট ডিভাইসের জন্যই কার্যকরী থাকবে।</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-4xl mx-auto px-4 space-y-4">
+            <p class="text-white text-sm font-semibold">সহজ হিসাব — RouteSoft Technologies</p>
+            <p>হটলাইন ও হোয়াটসঅ্যাপ সাপোর্ট: <a href="tel:01731844027" class="text-sky-400 hover:underline">01731844027</a> (+8801731844027)</p>
+            <p class="text-slate-600">© 2026 RouteSoft Technologies. সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
     </footer>
 
-  </div>
-
-  <script>
-    // Automatically update copyright year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Small interaction feedback when download starts
-    const downloadBtn = document.getElementById("downloadBtn");
-
-    downloadBtn.addEventListener("click", function () {
-      const originalText = this.innerHTML;
-
-      this.innerHTML = `
-        <svg viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2"
-             stroke-linecap="round" stroke-linejoin="round">
-          <path d="M20 6 9 17l-5-5"></path>
-        </svg>
-        Download Starting...
-      `;
-
-      setTimeout(() => {
-        this.innerHTML = originalText;
-      }, 1800);
-    });
-  </script>
 </body>
 </html>
-```
